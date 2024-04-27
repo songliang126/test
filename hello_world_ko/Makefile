@@ -8,5 +8,7 @@ all:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 
 clean:
-	rm -f *.ko *.mod.c *.mod.o *.o
+	#rm -f *.ko *.mod.c *.mod.o *.o
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) clean
+
 endif
