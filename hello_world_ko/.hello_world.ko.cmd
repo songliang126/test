@@ -1,0 +1,1 @@
+cmd_/home/song/programs/hello_world_ko/hello_world.ko := ld -r -m elf_i386 -T ./scripts/module-common.lds --build-id  -o /home/song/programs/hello_world_ko/hello_world.ko /home/song/programs/hello_world_ko/hello_world.o /home/song/programs/hello_world_ko/hello_world.mod.o
