@@ -1,0 +1,27 @@
+/ {
+        compatible = "aaa,aaa";
+
+	int:inter@0x012340000 {
+		compatible = "inter-controller";
+		#address-cells = <0x2>;
+		#size-cells = <0x1>;
+		interrupt-controller;
+		reg = <0x0 0x12340000 0x100>;
+	};
+
+	level0 {
+		compatible = "level0";
+		#address-cells = <0x2>; 
+		#size-cells = <0x2>;
+		node0 = <0x0>;
+
+		level1 {
+			compatible = "level1";
+			node1 = <0x1>;
+			reg = <0x0 0xfff00000 0x0 0x1000>;
+			interrupt-parent = <&int>;
+			interrupt = <0 0x259 0x4>;
+		};
+	};
+};
+
